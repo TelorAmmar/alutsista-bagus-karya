@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SenjataController;
+use App\Http\Controllers\KendaraanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,11 @@ Route::get('/senjata/{senjata}', [SenjataController::class,'show'])->name('senja
 Route::get('/senjata/{senjata}/edit',[SenjataController::class,'edit'])->name('senjata.edit');
 Route::patch('/senjata/{senjata}',[SenjataController::class,'update'])->name('senjata.update');
 Route::delete('/senjata/{senjata}',[SenjataController::class,'destroy'])->name('senjata.destroy');
+// Kendaraan
+Route::get('/kendaraan/create',[KendaraanController::class,'create'])->name('kendaraan.create');
+Route::post('/kendaraan',[KendaraanController::class,'store'])->name('kendaraan.store');
+Route::get('/kendaraan',[KendaraanController::class,'index'])->name('kendaraan.index');
+Route::get('/kendaraan/{kendaraan}', [KendaraanController::class,'show'])->name('kendaraan.show');
+Route::get('/kendaraan/{kendaraan}/edit',[KendaraanController::class,'edit'])->name('kendaraan.edit');
+Route::patch('/kendaraan/{kendaraan}',[KendaraanController::class,'update'])->name('kendaraan.update');
+Route::delete('/kendaraan/{kendaraan}',[KendaraanController::class,'destroy'])->name('kendaraan.destroy');
