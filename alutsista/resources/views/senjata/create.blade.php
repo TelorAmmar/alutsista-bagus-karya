@@ -12,6 +12,9 @@
         <div class="row">
             <div class="col-md-8 col-xl-6">
                 <h1>Input Senjata</h1>
+                <a href="../senjata"
+                    class="btn btn-primary">Back
+                </a>
                 <hr>
                 <form action="{{ route('senjata.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf

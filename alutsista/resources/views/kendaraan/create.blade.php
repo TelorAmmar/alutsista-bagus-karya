@@ -12,6 +12,9 @@
         <div class="row">
             <div class="col-md-8 col-xl-6">
                 <h1>Input Kendaraan</h1>
+                <a href="../kendaraan"
+                    class="btn btn-primary">Back
+                </a>
                 <hr>
                 <form action="{{ route('kendaraan.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf

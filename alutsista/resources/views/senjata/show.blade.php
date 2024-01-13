@@ -13,6 +13,9 @@
                 <div class="col-12">
                     <div class="pt-3 d-flex justify-content-end align-items-center">
                         <h1 class="h2 mr-auto">Biodata {{$senjata->nama}}</h1>
+                        <a href="../senjata"
+                            class="btn btn-primary">Back
+                        </a>
                         <a href="{{ route('senjata.edit',['senjata' => $senjata->id]) }}"
                             class="btn btn-primary">Edit
                         </a>
