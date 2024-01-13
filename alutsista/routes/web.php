@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SenjataController;
 use App\Http\Controllers\KendaraanController;
+use App\Http\Controllers\PinjamController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +37,11 @@ Route::get('/kendaraan/{kendaraan}', [KendaraanController::class,'show'])->name(
 Route::get('/kendaraan/{kendaraan}/edit',[KendaraanController::class,'edit'])->name('kendaraan.edit');
 Route::patch('/kendaraan/{kendaraan}',[KendaraanController::class,'update'])->name('kendaraan.update');
 Route::delete('/kendaraan/{kendaraan}',[KendaraanController::class,'destroy'])->name('kendaraan.destroy');
+// Pinjam
+Route::get('/pinjam/create',[PinjamController::class,'create'])->name('pinjam.create');
+Route::post('/pinjam',[PinjamController::class,'store'])->name('pinjam.store');
+Route::get('/pinjam',[PinjamController::class,'index'])->name('pinjam.index');
+Route::get('/pinjam/{pinjam}', [PinjamController::class,'show'])->name('pinjam.show');
+Route::get('/pinjam/{pinjam}/edit',[PinjamController::class,'edit'])->name('pinjam.edit');
+Route::patch('/pinjam/{pinjam}',[PinjamController::class,'update'])->name('pinjam.update');
+Route::delete('/pinjam/{pinjam}',[PinjamController::class,'destroy'])->name('pinjam.destroy');
