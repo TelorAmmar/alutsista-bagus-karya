@@ -12,10 +12,8 @@ class Dasboard extends Controller
     public function index()
     {
         $data['module']['name'] = "Beranda";
-        return view('dasboard.welcome',['data' => $data]);
         $senjatas = Senjata::all();
-        return view('dasboard.welcome',['senjatas' => $senjatas]);
         $kendaraans = Kendaraan::all();
-        return view('dasboard.welcome',['kendaraans' => $kendaraans]); 
+        return view('dasboard.welcome',['senjatas' => $senjatas],['kendaraans' => $kendaraans]);
         }
 }

@@ -68,7 +68,26 @@
     <section class="products" id="products">
         <h2><span>Koleksi</span>Kami</h2>
         <div class="row">
-            
+            @foreach ($senjatas as $senjata)
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{{url('')}}/{{$senjata->image}}" alt="Product 1">
+                </div>
+                <div class="product-content">
+                    <a href="{{ route('senjata.show',['senjata' => $senjata->id]) }}"><h3>{{$senjata->nama}}</h3></a>
+                </div>
+            </div>
+            @endforeach
+            @foreach ($kendaraans as $kendaraan)
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{{url('')}}/{{$kendaraan->image}}" alt="Product 1">
+                </div>
+                <div class="product-content">
+                    <a href="{{ route('kendaraan.show',['kendaraan' => $kendaraan->id]) }}"><h3>{{$kendaraan->nama}}</h3></a>
+                </div>
+            </div>
+            @endforeach
         </div>
     </section>
 <!-- Products Section end -->
