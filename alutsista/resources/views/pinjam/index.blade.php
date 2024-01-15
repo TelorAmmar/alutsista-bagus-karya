@@ -39,8 +39,8 @@
         <div class="container mt-3">
             <div class="row">
                 <div class="col-12">
-                    <div class="py-4 d-flex justify-content-end align-items-center">
-                        <h2 class="mr-auto">Daftar Riwayat Peminjaman</h2>
+                    <div class="py-4 d-flex flex-row justify-content-end align-items-center">
+                        <h2 class="mr-auto">Daftar Riwayat Peminjaman x x x x x x x x x x x </h2>
                         <a href="{{ route('pinjam.create') }}" class="btn btn-primary">
                             Tambah Riwayat Peminjaman
                         </a>

@@ -116,6 +116,13 @@ body {
     background-color: #d70303;
 }
 
+.bar {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
 
 /* Footer */
 
