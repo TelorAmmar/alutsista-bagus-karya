@@ -1,25 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script> 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-    <title>Input Riwayat Peminjaman</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{{asset('assets/icons/icon.png')}}">
+    <title>Alutsista Indonesia</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="stylesheet" href="public/assets/css/pinjam.css">
 </head>
 <body>
-    <div class="container pt-4 bg-white">
-        <div class="row">
-            <div class="col-md-8 col-xl-6">
-                <h1>Input Riwayat Peminjaman</h1>
-                <a href="../pinjam"
-                    class="btn btn-primary">Back
-                </a>
-                <hr>
-                <form action="{{ route('pinjam.store') }}" method="POST" enctype="multipart/form-data">
+<!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-3 fixed-top">
+        <div class="container">
+            <a class="navbar-logo" href="#">Alutsista<span>Indonesia</span>.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="d-flex">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/kendaraan">Back</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!-- navbar end -->
+                <form action="{{ route('pinjam.store') }}" method="POST" class="form" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label for="peminjam">Peminjam</label>
@@ -71,7 +87,7 @@
                     </div>
                     <div class="form-group">
                         <label for="tanggal_pinjam">Tanggal Pinjam</label>
-                        <input type="text"
+                        <input type="date"
                         class="form-control @error('tanggal_pinjam') is-invalid @enderror"
                         id="date" name="tanggal_pinjam" value="{{ old('tanggal_pinjam') }}">
                         @error('tanggal_pinjam')
@@ -80,7 +96,7 @@
                     </div>
                     <div class="form-group">
                         <label for="tanggal_kembali">Tanggal Kembali</label>
-                        <input type="text"
+                        <input type="date"
                         class="form-control @error('tanggal_kembali') is-invalid @enderror"
                         id="date" name="tanggal_kembali" value="{{ old('tanggal_kembali') }}">
                         @error('tanggal_kembali')
@@ -92,6 +108,27 @@
             </div>
         </div>
     </div>
+
+<!-- Footer start -->
+    <footer>
+        <div class="socials">
+            <a href="#"><i data-feather="instagram"></i></a>
+            <a href="#"><i data-feather="twitter"></i></a>
+            <a href="#"><i data-feather="facebook"></i></a>
+        </div>
+
+        <div class="credit">
+            <p>Created by <a href="">PT.Bagus Karya</a>. | &copy; 2024.</p>
+        </div>
+    </footer>
+    <!-- Footer end -->
+
+    <!-- Feather Icons -->
+    <script>
+        feather.replace()
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 <script>
     $(document).ready(function() {            

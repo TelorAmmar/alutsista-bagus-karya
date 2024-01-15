@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    //
     public function index()
     {
         return view('login.login');
@@ -22,7 +21,7 @@ class AdminController extends Controller
             if (($request->password == $result->password))
             {
                 session(['username' => $request->username]);
-                return redirect('/senjata');
+                return redirect('/index');
             }
             else {
                 return back()->withInput()->with('pesan',"Login Gagal");
