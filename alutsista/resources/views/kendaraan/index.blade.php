@@ -58,7 +58,7 @@
     </div>
 </section>
 <!-- Hero Section end -->
- <!-- Footer start -->
+<!-- Footer start -->
     <footer>
         <div class="socials">
             <a href="#"><i data-feather="instagram"></i></a>

@@ -12,7 +12,7 @@
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
 
-    <link rel="stylesheet" href="public/assets/css/input.css">
+    <link rel="stylesheet" href="../public/assets/css/input.css">
 </head>
 <body>
 <!-- navbar -->
@@ -38,106 +38,106 @@
 <!-- navbar end -->
 <!-- form Section start -->
 <form action="{{ route('senjata.store') }}" method="POST" class="form" enctype="multipart/form-data">
-                    @csrf
-                    <div class="nama-alutsista">
-                        <label for="nama">Nama Senjata</label>
-                        <input type="text"
-                        class="form-control @error('nama') is-invalid @enderror"
-                        id="nama" name="nama" value="{{ old('nama') }}">
-                        @error('nama')
-                            <div class="text-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-                    <div class="nomor-seri">
-                        <label for="no_seri">Nomor Seri</label>
-                        <input type="text"
-                        class="form-control @error('no_seri') is-invalid @enderror"
-                        id="no_seri" name="no_seri" value="{{ old('no_seri') }}">
-                        @error('no_seri')
-                            <div class="text-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-                    <div class="kapasitas">
-                        <label for="kapasitas">Kapasitas</label>
-                        <input type="text"
-                        class="form-control @error('kapasitas') is-invalid @enderror"
-                        id="kapasitas" name="kapasitas" value="{{ old('kapasitas') }}">
-                        @error('kapasitas')
-                            <div class="text-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-                    <div class="ukuran">
-                        <label for="ukuran">Ukuran</label>
-                        <input type="text"
-                        class="form-control @error('ukuran') is-invalid @enderror"
-                        id="ukuran" name="ukuran" value="{{ old('ukuran') }}">
-                        @error('ukuran')
-                            <div class="text-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-                    <div class="berat">
-                        <label for="berat">Berat</label>
-                        <input type="text"
-                        class="form-control @error('berat') is-invalid @enderror"
-                        id="berat" name="berat" value="{{ old('berat') }}">
-                        @error('berat')
-                            <div class="text-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-                    <div class="daya-tembak">
-                        <label for="daya_tembak">Daya Tembak</label>
-                        <input type="text"
-                        class="form-control @error('daya_tembak') is-invalid @enderror"
-                        id="daya_tembak" name="daya_tembak" value="{{ old('daya_tembak') }}">
-                        @error('daya_tembak')
-                            <div class="text-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-                    <div class="kecepatan">
-                        <label for="kecepatan">Kecepatan</label>
-                        <input type="text"
-                        class="form-control @error('kecepatan') is-invalid @enderror"
-                        id="kecepatan" name="kecepatan" value="{{ old('kecepatan') }}">
-                        @error('kecepatan')
-                            <div class="text-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-                    <div class="status-kondisi">
-                        <label for="status">Status</label>
-                        <input type="text"
-                        class="form-control @error('status') is-invalid @enderror"
-                        id="status" name="status" value="{{ old('status') }}">
-                        @error('status')
-                            <div class="text-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-                    <div class="pemilik-lokasi">
-                        <label for="pemilik">Pemilik</label>
-                        <input type="text"
-                        class="form-control @error('pemilik') is-invalid @enderror"
-                        id="pemilik" name="pemilik" value="{{ old('pemilik') }}">
-                        @error('pemilik')
-                            <div class="text-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-                    <div class="sejarah-pemeliharaan">
-                        <label for="sejarah">Sejarah</label>
-                        <textarea class="form-control" id="sejarah"
-                        name="sejarah">{{ old('sejarah') }}</textarea>
-                    </div>
-                    <div class="pemakaian-riwayat-operasi">
-                        <label for="pemakaian">Pemakaian dan Riwayat Oprasi</label>
-                        <textarea class="form-control" id="pemakaian"
-                        name="pemakaian">{{ old('pemakaian') }}</textarea>
-                    </div>
-                    <div class="tambah-gambar">
-                        <label for="image">Gambar</label>
-                        <input type="file" class="form-control-file" id="image" name="image">
-                        @error('image')
-                        <div class="text-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-                    <button type="submit" class="btn btn-danger">Submit</button>
+    @csrf
+    <div class="nama-alutsista">
+        <label for="nama">Nama Senjata</label>
+        <input type="text"
+        class="form-control @error('nama') is-invalid @enderror"
+        id="nama" name="nama" value="{{ old('nama') }}">
+        @error('nama')
+            <div class="text-danger">{{ $message }}</div>
+        @enderror
+    </div>
+    <div class="nomor-seri">
+        <label for="no_seri">Nomor Seri</label>
+        <input type="text"
+        class="form-control @error('no_seri') is-invalid @enderror"
+        id="no_seri" name="no_seri" value="{{ old('no_seri') }}">
+        @error('no_seri')
+            <div class="text-danger">{{ $message }}</div>
+        @enderror
+    </div>
+    <div class="kapasitas">
+        <label for="kapasitas">Kapasitas</label>
+        <input type="text"
+        class="form-control @error('kapasitas') is-invalid @enderror"
+        id="kapasitas" name="kapasitas" value="{{ old('kapasitas') }}">
+        @error('kapasitas')
+            <div class="text-danger">{{ $message }}</div>
+        @enderror
+    </div>
+    <div class="ukuran">
+        <label for="ukuran">Ukuran</label>
+        <input type="text"
+        class="form-control @error('ukuran') is-invalid @enderror"
+        id="ukuran" name="ukuran" value="{{ old('ukuran') }}">
+        @error('ukuran')
+            <div class="text-danger">{{ $message }}</div>
+        @enderror
+    </div>
+    <div class="berat">
+        <label for="berat">Berat</label>
+        <input type="text"
+        class="form-control @error('berat') is-invalid @enderror"
+        id="berat" name="berat" value="{{ old('berat') }}">
+        @error('berat')
+            <div class="text-danger">{{ $message }}</div>
+        @enderror
+    </div>
+    <div class="daya-tembak">
+        <label for="daya_tembak">Daya Tembak</label>
+        <input type="text"
+        class="form-control @error('daya_tembak') is-invalid @enderror"
+        id="daya_tembak" name="daya_tembak" value="{{ old('daya_tembak') }}">
+        @error('daya_tembak')
+            <div class="text-danger">{{ $message }}</div>
+        @enderror
+    </div>
+    <div class="kecepatan">
+        <label for="kecepatan">Kecepatan</label>
+        <input type="text"
+        class="form-control @error('kecepatan') is-invalid @enderror"
+        id="kecepatan" name="kecepatan" value="{{ old('kecepatan') }}">
+        @error('kecepatan')
+            <div class="text-danger">{{ $message }}</div>
+        @enderror
+    </div>
+    <div class="status-kondisi">
+        <label for="status">Status</label>
+        <input type="text"
+        class="form-control @error('status') is-invalid @enderror"
+        id="status" name="status" value="{{ old('status') }}">
+        @error('status')
+            <div class="text-danger">{{ $message }}</div>
+        @enderror
+    </div>
+    <div class="pemilik-lokasi">
+        <label for="pemilik">Pemilik</label>
+        <input type="text"
+        class="form-control @error('pemilik') is-invalid @enderror"
+        id="pemilik" name="pemilik" value="{{ old('pemilik') }}">
+        @error('pemilik')
+            <div class="text-danger">{{ $message }}</div>
+        @enderror
+    </div>
+    <div class="sejarah-pemeliharaan">
+        <label for="sejarah">Sejarah</label>
+        <textarea class="form-control" id="sejarah"
+        name="sejarah">{{ old('sejarah') }}</textarea>
+    </div>
+    <div class="pemakaian-riwayat-operasi">
+        <label for="pemakaian">Pemakaian dan Riwayat Oprasi</label>
+        <textarea class="form-control" id="pemakaian"
+        name="pemakaian">{{ old('pemakaian') }}</textarea>
+    </div>
+    <div class="tambah-gambar">
+        <label for="image">Gambar</label>
+        <input type="file" class="form-control-file" id="image" name="image">
+        @error('image')
+        <div class="text-danger">{{ $message }}</div>
+        @enderror
+    </div>
+    <button type="submit" class="btn btn-danger">Submit</button>
 </form>
 <!-- form Section end -->
 
