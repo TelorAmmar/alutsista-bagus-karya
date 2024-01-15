@@ -38,6 +38,7 @@
 <!-- navbar end -->
 <!-- form Section start -->
 <form action="{{ route('senjata.update',['senjata' => $senjata->id]) }}" method="POST" class="form" enctype="multipart/form-data">
+    @method('PATCH')    
     @csrf
     <div class="nama-alutsista">
         <label for="nama">Nama Senjata</label>

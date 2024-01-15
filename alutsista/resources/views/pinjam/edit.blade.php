@@ -11,7 +11,7 @@
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
 
-    <link rel="stylesheet" href="../public/assets/css/pinjam.css">
+    <link rel="stylesheet" href="../../public/assets/css/pinjam.css">
 </head>
 <body>
 <!-- navbar -->
@@ -36,6 +36,7 @@
     </nav>
 <!-- navbar end -->
                 <form action="{{ route('pinjam.update',['pinjam' => $pinjam->id]) }}" method="POST" class="form" enctype="multipart/form-data">
+                    @method('PATCH')
                     @csrf
                     <div class="form-group">
                         <label for="peminjam">Peminjam</label>

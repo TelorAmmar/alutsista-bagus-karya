@@ -77,7 +77,7 @@ class SenjataController extends Controller
     {
         $validateData = $request->validate([
             'nama' => 'required|min:3|max:50',
-            'no_seri' => 'required|size:20',
+            'no_seri' => 'required',
             'kapasitas' => 'required',
             'ukuran' => 'required',
             'berat' => 'required',
