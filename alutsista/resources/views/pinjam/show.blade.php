@@ -41,6 +41,9 @@
                 <div class="col-12">
                     <div class="pt-3 d-flex justify-content-end align-items-center">
                         <h1>{{$pinjam->peminjam}}</h1>
+                        <a href="{{ route('pinjam.edit',['pinjam' => $pinjam->id]) }}"
+                            class="btn btn-primary">Edit
+                        </a>
                         <form action="{{ route('pinjam.destroy',['pinjam'=>$pinjam->id]) }}"
                             method="POST">
                             @method('DELETE')

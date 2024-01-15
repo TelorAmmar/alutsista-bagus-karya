@@ -40,6 +40,9 @@
     <div class="row">
         <div class="col-12">
             <h1 >{{$kendaraan->nama}}</h1>
+            <a href="{{ route('kendaraan.edit',['kendaraan' => $kendaraan->id]) }}"
+                class="btn btn-primary">Edit
+            </a>
             <form action="{{ route('kendaraan.destroy',['kendaraan'=>$kendaraan->id]) }}"
                 method="POST">
                 @method('DELETE')
