@@ -37,7 +37,7 @@
     </nav>
 <!-- navbar end -->
 <!-- form Section start -->
-<form action="{{ route('senjata.update') }}" method="POST" class="form" enctype="multipart/form-data">
+<form action="{{ route('senjata.update',['senjata' => $senjata->id]) }}" method="POST" class="form" enctype="multipart/form-data">
     @csrf
     <div class="nama-alutsista">
         <label for="nama">Nama Senjata</label>

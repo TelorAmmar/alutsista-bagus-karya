@@ -35,7 +35,7 @@
         </div>
     </nav>
 <!-- navbar end -->
-                <form action="{{ route('pinjam.update') }}" method="POST" class="form" enctype="multipart/form-data">
+                <form action="{{ route('pinjam.update',['pinjam' => $pinjam->id]) }}" method="POST" class="form" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label for="peminjam">Peminjam</label>
