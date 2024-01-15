@@ -45,7 +45,7 @@
     @foreach ($kendaraans as $kendaraan)
         <div class="product-card">
             <div class="product-image">
-                <img src="{{url('')}}/{{$kendaraan->image}}" alt="Product 1">
+                <img src="{{url('')}}/{{$kendaraan->image}}" alt="Product 1" style="width: 30rem">
             </div>
             <div class="product-content">
                 <a href="{{ route('kendaraan.show',['kendaraan' => $kendaraan->id]) }}"><h3>{{$kendaraan->nama}}</h3></a>
