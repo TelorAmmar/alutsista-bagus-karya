@@ -9,6 +9,6 @@ class Dasboard extends Controller
     public function index()
     {
         $data['module']['name'] = "Beranda";
-        return view('kerangka.master',['data' => $data]);
+        return view('welcome',['data' => $data]);
         }
 }
