@@ -21,7 +21,7 @@ class AdminController extends Controller
             if (($request->password == $result->password))
             {
                 session(['username' => $request->username]);
-                return redirect('/index');
+                return redirect('/');
             }
             else {
                 return back()->withInput()->with('pesan',"Login Gagal");

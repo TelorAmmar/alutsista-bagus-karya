@@ -40,7 +40,7 @@
                     </li>
                 </ul>
                 @auth
-                    <form action="/logout" method="post">
+                    <form action="Route::get('/logout', [AdminController::class,'logout'])->name('login.logout');" method="post">
                         @csrf
                         <button class="btn btn-danger"><a class="nav-link active">Logout</a></button>
                 @else
@@ -68,24 +68,7 @@
     <section class="products" id="products">
         <h2><span>Koleksi</span>Kami</h2>
         <div class="row">
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="{{asset('assets/image/senjata/P3A_1.jpg')}}" alt="Product 1">
-                </div>
-                <div class="product-content">
-                    <h3>P-3A Kal. 7.65 mm</h3>
-                    <a href="/senjata"><i data-feather="arrow-right-circle"></i></a>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="{{asset('assets/image/kendaraan/SampingDepanSized.jpg')}}" alt="Product 1">
-                </div>
-                <div class="product-content">
-                    <h3>Anoa 6x6 Mortar</h3>
-                    <a href="/kendaraan"><i data-feather="arrow-right-circle"></i></a>
-                </div>
-            </div>
+            
         </div>
     </section>
 <!-- Products Section end -->

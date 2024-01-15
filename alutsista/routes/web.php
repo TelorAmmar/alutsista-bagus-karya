@@ -18,9 +18,7 @@ use App\Http\Controllers\Dasboard;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 Route::get('/', [Dasboard::class,'index'])->name('index');
 // Senjata
 Route::get('/senjata/create',[SenjataController::class,'create'])->name('senjata.create')->middleware('login_auth');
