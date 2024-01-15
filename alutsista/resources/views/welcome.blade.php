@@ -35,6 +35,9 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="{{ route('kendaraan.index') }}">Kendaraan</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ route('pinjam.index') }}">Riwayat Peminjaman</a>
+                    </li>
                 </ul>
                 @auth
                     <form action="/logout" method="post">

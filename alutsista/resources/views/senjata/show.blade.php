@@ -40,6 +40,12 @@
     <div class="row">
         <div class="col-12">
             <h1 >{{$senjata->nama}}</h1>
+            <form action="{{ route('senjata.destroy',['senjata'=>$senjata->id]) }}"
+                method="POST">
+                @method('DELETE')
+                @csrf
+                <button type="submit" class="btn btn-danger ml-3">Hapus</button>
+            </form>
             <ul style="list-style: none;">
                 <li>Nama: {{$senjata->nama}} </li>
                 <li>No. Seri: {{$senjata->no_seri}} </li>

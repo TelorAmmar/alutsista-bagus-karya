@@ -32,9 +32,6 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="{{ route('senjata.create') }}">Tambah</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="{{ route('pinjam.index') }}">Peminjaman</a>
-                    </li>
                     </ul>
                 </div>
             </div>

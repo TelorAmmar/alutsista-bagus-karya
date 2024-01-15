@@ -41,6 +41,12 @@
                 <div class="col-12">
                     <div class="pt-3 d-flex justify-content-end align-items-center">
                         <h1>{{$pinjam->peminjam}}</h1>
+                        <form action="{{ route('pinjam.destroy',['pinjam'=>$pinjam->id]) }}"
+                            method="POST">
+                            @method('DELETE')
+                            @csrf
+                            <button type="submit" class="btn btn-danger ml-3">Hapus</button>
+                        </form>
                     </div>
                     <ul>
                         <li>Peminjam: {{$pinjam->peminjam}} </li>
