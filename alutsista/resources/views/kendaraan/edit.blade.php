@@ -14,7 +14,6 @@
 
     <link rel="stylesheet" href="../../public/assets/css/inputkendaraan.css">
 </head>
-
 <body>
 <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark py-3 fixed-top">
